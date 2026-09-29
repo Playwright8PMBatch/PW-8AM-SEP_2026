@@ -1,0 +1,23 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="33.338873">
+<testsuite name="download.spec.ts" timestamp="2026-09-28T03:08:08.289Z" hostname="chromium" tests="4" failures="0" skipped="0" time="29.217" errors="0">
+<testcase name="donwload file" classname="download.spec.ts" time="8.978">
+<system-out>
+<![CDATA[&&&&&&&& download&&&&&&&&: Promise {
+  [36m<pending>[39m,
+  [[32mSymbol(async_id_symbol)[39m]: [33m3337[39m,
+  [[32mSymbol(trigger_async_id_symbol)[39m]: [33m3232[39m,
+  [[32mSymbol(kResourceStore)[39m]: [90mundefined[39m
+}
+myfile.txt
+C:\Users\Anusha\Desktop\Playwright Projects\Playwright_8AM\test-results\.playwright-artifacts-0\d01da019-b4ff-4b80-9380-24f3ecefdafc
+]]>
+</system-out>
+</testcase>
+<testcase name="uploadfile - Browse File" classname="download.spec.ts" time="6.864">
+</testcase>
+<testcase name="uploadfile - Choose File" classname="download.spec.ts" time="9.472">
+</testcase>
+<testcase name="upload file using open button" classname="download.spec.ts" time="3.903">
+</testcase>
+</testsuite>
+</testsuites>

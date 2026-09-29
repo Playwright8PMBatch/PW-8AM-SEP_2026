@@ -1,0 +1,8 @@
+&&&&&&&& download&&&&&&&&: Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 3373,
+  [Symbol(trigger_async_id_symbol)]: 3268,
+  [Symbol(kResourceStore)]: undefined
+}
+myfile.txt
+C:\Users\Anusha\Desktop\Playwright Projects\Playwright_8AM\test-results\.playwright-artifacts-0\b4a84bbd-981a-4560-be4e-4146c9a7a6ef

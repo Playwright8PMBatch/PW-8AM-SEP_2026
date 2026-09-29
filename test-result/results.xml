@@ -1,0 +1,56 @@
+<testsuites id="" name="" tests="4" failures="0" skipped="0" errors="0" time="36.896763">
+<testsuite name="download.spec.ts" timestamp="2026-09-28T03:32:20.114Z" hostname="chromium" tests="4" failures="0" skipped="0" time="33.759" errors="0">
+<testcase name="donwload file" classname="download.spec.ts" time="10.258">
+<system-out>
+<![CDATA[&&&&&&&& download&&&&&&&&: Promise {
+  [36m<pending>[39m,
+  [[32mSymbol(async_id_symbol)[39m]: [33m7326[39m,
+  [[32mSymbol(trigger_async_id_symbol)[39m]: [33m6933[39m,
+  [[32mSymbol(kResourceStore)[39m]: [90mundefined[39m
+}
+myfile.txt
+C:\Users\Anusha\Desktop\Playwright Projects\Playwright_8AM\test-results\.playwright-artifacts-0\d725d504-ac39-4e60-9214-d0e8ecf41d1e
+
+[[ATTACHMENT|..\test-results\download-donwload-file-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\download-donwload-file-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\download-donwload-file-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="uploadfile - Browse File" classname="download.spec.ts" time="7.497">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\download-uploadfile---Browse-File-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\download-uploadfile---Browse-File-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\download-uploadfile---Browse-File-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="uploadfile - Choose File" classname="download.spec.ts" time="10.278">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\download-uploadfile---Choose-File-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\download-uploadfile---Choose-File-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\download-uploadfile---Choose-File-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="upload file using open button" classname="download.spec.ts" time="5.726">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\download-upload-file-using-open-button-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|..\test-results\download-upload-file-using-open-button-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\download-upload-file-using-open-button-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
