@@ -28,7 +28,7 @@ test("Parabank Registration",async({page})=>{
     // CSS Locators (Id, Class)
     let name = page.locator('[name= "customer.firstName"]').waitFor({state:'visible'});
     await page.waitForTimeout(2000);
-    await name.fill('Anusha');
+    // await name.fill('Anusha');
     await page.locator('[name= "customer.lastName"]').fill('Playwright',{timeout: 3000});
     await page.locator('[name= "customer.address.street"]').fill('Hyderabad');
     await page.locator('[name= "customer.address.city"]').fill('HYD');

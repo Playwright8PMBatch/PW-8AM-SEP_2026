@@ -4,7 +4,7 @@
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "download.spec.ts",
+      "screenshot.spec.ts",
       "--headed"
     ],
     "configFile": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\playwright.config.ts",
@@ -89,14 +89,14 @@
   },
   "suites": [
     {
-      "title": "download.spec.ts",
-      "file": "download.spec.ts",
+      "title": "screenshot.spec.ts",
+      "file": "screenshot.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "donwload file",
-          "ok": true,
+          "title": "capture the screenshot",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -109,211 +109,190 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10258,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "&&&&&&&& download&&&&&&&&: Promise {\n  \u001b[36m<pending>\u001b[39m,\n  [\u001b[32mSymbol(async_id_symbol)\u001b[39m]: \u001b[33m7326\u001b[39m,\n  [\u001b[32mSymbol(trigger_async_id_symbol)\u001b[39m]: \u001b[33m6933\u001b[39m,\n  [\u001b[32mSymbol(kResourceStore)\u001b[39m]: \u001b[90mundefined\u001b[39m\n}\n"
+                  "status": "failed",
+                  "duration": 786,
+                  "error": {
+                    "message": "Error: Playwright Test did not expect test.use() to be called here.\nMost common reasons include:\n- You are calling test.use() in a configuration file.\n- You are calling test.use() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n- You are calling test.use() from an async test.describe() block. Only sync ones are supported.",
+                    "stack": "Error: Playwright Test did not expect test.use() to be called here.\nMost common reasons include:\n- You are calling test.use() in a configuration file.\n- You are calling test.use() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n- You are calling test.use() from an async test.describe() block. Only sync ones are supported.\n    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts:45:10",
+                    "location": {
+                      "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts",
+                      "column": 10,
+                      "line": 45
                     },
+                    "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m test(\u001b[32m'capture the screenshot'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     test\u001b[33m.\u001b[39muse({\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m         screenshot\u001b[33m:\u001b[39m \u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 47 |\u001b[39m         video\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m         trace\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "myfile.txt\n"
-                    },
-                    {
-                      "text": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\.playwright-artifacts-0\\d725d504-ac39-4e60-9214-d0e8ecf41d1e\n"
+                      "location": {
+                        "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts",
+                        "column": 10,
+                        "line": 45
+                      },
+                      "message": "Error: Playwright Test did not expect test.use() to be called here.\nMost common reasons include:\n- You are calling test.use() in a configuration file.\n- You are calling test.use() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n- You are calling test.use() from an async test.describe() block. Only sync ones are supported.\n\n\u001b[0m \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m test(\u001b[32m'capture the screenshot'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     test\u001b[33m.\u001b[39muse({\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m         screenshot\u001b[33m:\u001b[39m \u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 47 |\u001b[39m         video\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m         trace\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts:45:10\u001b[22m"
                     }
                   ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-28T03:32:21.128Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-donwload-file-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-donwload-file-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-donwload-file-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "29cf83cb0d33ef5cc857-6502895486af23110cc0",
-          "file": "download.spec.ts",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "uploadfile - Browse File",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 40000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7497,
-                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-28T03:32:32.282Z",
+                  "startTime": "2026-10-09T03:14:00.559Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-uploadfile---Browse-File-chromium\\test-finished-1.png"
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-uploadfile---Browse-File-chromium\\video.webm"
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\error-context.md"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-uploadfile---Browse-File-chromium\\trace.zip"
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts",
+                    "column": 10,
+                    "line": 45
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "29cf83cb0d33ef5cc857-aa099cdcca15cf84d685",
-          "file": "download.spec.ts",
-          "line": 28,
+          "id": "e6e0a5cfb1a0a8a16337-df6f53ffe4e39388fa8a",
+          "file": "screenshot.spec.ts",
+          "line": 44,
           "column": 5
-        },
+        }
+      ],
+      "suites": [
         {
-          "title": "uploadfile - Choose File",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "debug testcase",
+          "file": "screenshot.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
             {
-              "timeout": 40000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "capture the screenshot",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 10278,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-28T03:32:39.996Z",
+                  "timeout": 40000,
                   "annotations": [],
-                  "attachments": [
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-uploadfile---Choose-File-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-uploadfile---Choose-File-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-uploadfile---Choose-File-chromium\\trace.zip"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14620,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-09T03:13:30.915Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase-capture-the-screenshot-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase-capture-the-screenshot-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase-capture-the-screenshot-chromium\\trace.zip"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "29cf83cb0d33ef5cc857-a7d9f864853c1c4a5212",
-          "file": "download.spec.ts",
-          "line": 43,
-          "column": 5
-        },
-        {
-          "title": "upload file using open button",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "e6e0a5cfb1a0a8a16337-307c3816dcf929af0e89",
+              "file": "screenshot.spec.ts",
+              "line": 12,
+              "column": 5
+            },
             {
-              "timeout": 40000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "capture the screenshot Demo Webshop",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 5726,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-28T03:32:50.492Z",
+                  "timeout": 40000,
                   "annotations": [],
-                  "attachments": [
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-upload-file-using-open-button-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-upload-file-using-open-button-chromium\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\download-upload-file-using-open-button-chromium\\trace.zip"
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10615,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-09T03:13:49.379Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\\trace.zip"
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "e6e0a5cfb1a0a8a16337-22ea37786adf0f2e6902",
+              "file": "screenshot.spec.ts",
+              "line": 26,
+              "column": 5
             }
-          ],
-          "id": "29cf83cb0d33ef5cc857-9ca1ac1c1e0792b1c1a8",
-          "file": "download.spec.ts",
-          "line": 62,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-28T03:32:20.043Z",
-    "duration": 36896.763,
-    "expected": 4,
+    "startTime": "2026-10-09T03:13:29.405Z",
+    "duration": 33067.346,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
