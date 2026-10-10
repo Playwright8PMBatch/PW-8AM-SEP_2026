@@ -1,0 +1,54 @@
+Welcome to table oprations
+the count fo add to cart is: 3
+Repetion 0
+Repetion 1
+Repetion 2
+[
+  '\n' +
+    '                            \n' +
+    '                                Remove:\n' +
+    '                                \n' +
+    '                            \n' +
+    '                                                                            \n' +
+    '                                \n' +
+    '                            \n' +
+    '                        \n' +
+    '                            Fiction\n' +
+    '                                                                                                            \n' +
+    '                        \n' +
+    '                            Price:\n' +
+    '                            24.00\n' +
+    '                        \n' +
+    '                        \n' +
+    '                            Qty.:\n' +
+    '                                    \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            Total:\n' +
+    '                            24.00\n' +
+    '                        \n' +
+    '                    '
+]
+Remove:FictionPrice:24.00Qty.:Total:24.00
+[
+  'Remove:\n' +
+    '                                \n' +
+    '                            \n' +
+    '                                                                            \n' +
+    '                                \n' +
+    '                            \n' +
+    '                        \n' +
+    '                            Fiction\n' +
+    '                                                                                                            \n' +
+    '                        \n' +
+    '                            Price:\n' +
+    '                            24.00\n' +
+    '                        \n' +
+    '                        \n' +
+    '                            Qty.:\n' +
+    '                                    \n' +
+    '                        \n' +
+    '                        \n' +
+    '                            Total:\n' +
+    '                            24.00'
+]

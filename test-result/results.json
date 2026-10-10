@@ -3,9 +3,7 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\node_modules\\@playwright\\test\\cli.js",
-      "test",
-      "screenshot.spec.ts",
-      "--headed"
+      "test"
     ],
     "configFile": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\playwright.config.ts",
     "rootDir": "C:/Users/Anusha/Desktop/Playwright Projects/Playwright_8AM/tests",
@@ -19,7 +17,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 5
     },
     "preserveOutput": "always",
     "projects": [
@@ -28,7 +26,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 5
         },
         "id": "chromium",
         "name": "chromium",
@@ -89,14 +87,14 @@
   },
   "suites": [
     {
-      "title": "screenshot.spec.ts",
-      "file": "screenshot.spec.ts",
+      "title": "dropdown.spec.ts",
+      "file": "dropdown.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "capture the screenshot",
-          "ok": false,
+          "title": "multiselect native dropdown",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -109,58 +107,85 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21697,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T03:05:08.614Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "26e243c9a3d273e4cdec-1089ebf7bbd3b57b7138",
+          "file": "dropdown.spec.ts",
+          "line": 79,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "fixtures.spec.ts",
+      "file": "fixtures.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "handle the alerts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "failed",
-                  "duration": 786,
+                  "duration": 33768,
                   "error": {
-                    "message": "Error: Playwright Test did not expect test.use() to be called here.\nMost common reasons include:\n- You are calling test.use() in a configuration file.\n- You are calling test.use() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n- You are calling test.use() from an async test.describe() block. Only sync ones are supported.",
-                    "stack": "Error: Playwright Test did not expect test.use() to be called here.\nMost common reasons include:\n- You are calling test.use() in a configuration file.\n- You are calling test.use() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n- You are calling test.use() from an async test.describe() block. Only sync ones are supported.\n    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts:45:10",
+                    "message": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://the-internet.herokuapp.com/javascript_alerts\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://the-internet.herokuapp.com/javascript_alerts\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\fixtures.spec.ts:45:16",
                     "location": {
-                      "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts",
-                      "column": 10,
+                      "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\fixtures.spec.ts",
+                      "column": 16,
                       "line": 45
                     },
-                    "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m test(\u001b[32m'capture the screenshot'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     test\u001b[33m.\u001b[39muse({\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m         screenshot\u001b[33m:\u001b[39m \u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 47 |\u001b[39m         video\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m         trace\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[0m"
+                    "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m \u001b[90m// Dialog boxes, certificate popups, alert ...\u001b[39m\n \u001b[90m 44 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'handle the alerts'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://the-internet.herokuapp.com/javascript_alerts'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m\n \u001b[90m 47 |\u001b[39m     \u001b[90m// if future if any dialog box trigger then execute this.\u001b[39m\n \u001b[90m 48 |\u001b[39m     page\u001b[33m.\u001b[39mon(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m dialog \u001b[33m=>\u001b[39m {\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts",
-                        "column": 10,
+                        "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\fixtures.spec.ts",
+                        "column": 16,
                         "line": 45
                       },
-                      "message": "Error: Playwright Test did not expect test.use() to be called here.\nMost common reasons include:\n- You are calling test.use() in a configuration file.\n- You are calling test.use() in a file that is imported by the configuration file.\n- You have two different versions of @playwright/test. This usually happens\n  when one of the dependencies in your package.json depends on @playwright/test.\n- You are calling test.use() from an async test.describe() block. Only sync ones are supported.\n\n\u001b[0m \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m test(\u001b[32m'capture the screenshot'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     test\u001b[33m.\u001b[39muse({\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m         screenshot\u001b[33m:\u001b[39m \u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 47 |\u001b[39m         video\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m         trace\u001b[33m:\u001b[39m\u001b[32m'on'\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts:45:10\u001b[22m"
+                      "message": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://the-internet.herokuapp.com/javascript_alerts\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 43 |\u001b[39m \u001b[90m// Dialog boxes, certificate popups, alert ...\u001b[39m\n \u001b[90m 44 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'handle the alerts'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://the-internet.herokuapp.com/javascript_alerts'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m\n \u001b[90m 47 |\u001b[39m     \u001b[90m// if future if any dialog box trigger then execute this.\u001b[39m\n \u001b[90m 48 |\u001b[39m     page\u001b[33m.\u001b[39mon(\u001b[32m'dialog'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m dialog \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\fixtures.spec.ts:45:16\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-09T03:14:00.559Z",
+                  "startTime": "2026-10-10T03:05:08.488Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\video.webm"
-                    },
-                    {
                       "name": "error-context",
                       "contentType": "text/markdown",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-capture-the-screenshot-chromium\\trace.zip"
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\fixtures-handle-the-alerts-chromium\\error-context.md"
                     }
                   ],
                   "errorLocation": {
-                    "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\screenshot.spec.ts",
-                    "column": 10,
+                    "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\fixtures.spec.ts",
+                    "column": 16,
                     "line": 45
                   }
                 }
@@ -168,131 +193,210 @@
               "status": "unexpected"
             }
           ],
-          "id": "e6e0a5cfb1a0a8a16337-df6f53ffe4e39388fa8a",
-          "file": "screenshot.spec.ts",
+          "id": "4a2f45dc9867f1ead803-a172ff97a6b3e66a7f4c",
+          "file": "fixtures.spec.ts",
           "line": 44,
-          "column": 5
+          "column": 6
         }
-      ],
-      "suites": [
+      ]
+    },
+    {
+      "title": "iframe.spec.ts",
+      "file": "iframe.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
         {
-          "title": "debug testcase",
-          "file": "screenshot.spec.ts",
-          "line": 10,
-          "column": 6,
-          "specs": [
+          "title": "Nested Frames",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": "capture the screenshot",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 40000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 28170,
+                  "error": {
+                    "message": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://the-internet.herokuapp.com/nested_frames\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://the-internet.herokuapp.com/nested_frames\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\iframe.spec.ts:18:16",
+                    "location": {
+                      "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\iframe.spec.ts",
+                      "column": 16,
+                      "line": 18
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'Nested Frames'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://the-internet.herokuapp.com/nested_frames'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mconst\u001b[39m frames \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mframes()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     console\u001b[33m.\u001b[39mlog(frames\u001b[33m.\u001b[39mlength)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 14620,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-09T03:13:30.915Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase-capture-the-screenshot-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase-capture-the-screenshot-chromium\\video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase-capture-the-screenshot-chromium\\trace.zip"
-                        }
-                      ]
+                      "location": {
+                        "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\iframe.spec.ts",
+                        "column": 16,
+                        "line": 18
+                      },
+                      "message": "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://the-internet.herokuapp.com/nested_frames\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m test\u001b[33m.\u001b[39monly(\u001b[32m'Nested Frames'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://the-internet.herokuapp.com/nested_frames'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mconst\u001b[39m frames \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mframes()\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     console\u001b[33m.\u001b[39mlog(frames\u001b[33m.\u001b[39mlength)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\iframe.spec.ts:18:16\u001b[22m"
                     }
                   ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e6e0a5cfb1a0a8a16337-307c3816dcf929af0e89",
-              "file": "screenshot.spec.ts",
-              "line": 12,
-              "column": 5
-            },
-            {
-              "title": "capture the screenshot Demo Webshop",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 40000,
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T03:05:08.644Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "attachments": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10615,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-09T03:13:49.379Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\\test-finished-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\\video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\\trace.zip"
-                        }
-                      ]
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\iframe-Nested-Frames-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\test-results\\iframe-Nested-Frames-chromium\\error-context.md"
                     }
                   ],
-                  "status": "expected"
+                  "errorLocation": {
+                    "file": "C:\\Users\\Anusha\\Desktop\\Playwright Projects\\Playwright_8AM\\tests\\iframe.spec.ts",
+                    "column": 16,
+                    "line": 18
+                  }
                 }
               ],
-              "id": "e6e0a5cfb1a0a8a16337-22ea37786adf0f2e6902",
-              "file": "screenshot.spec.ts",
-              "line": 26,
-              "column": 5
+              "status": "unexpected"
             }
-          ]
+          ],
+          "id": "00c842d2a0f464768682-479d753e1b38fc15ef7f",
+          "file": "iframe.spec.ts",
+          "line": 17,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "TableOperations\\Nativetable.spec.ts",
+      "file": "TableOperations/Nativetable.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "do operations for particular row",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 25865,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Welcome to table oprations\n"
+                    },
+                    {
+                      "text": "the count fo add to cart is: \u001b[33m3\u001b[39m\n"
+                    },
+                    {
+                      "text": "Repetion 0\n"
+                    },
+                    {
+                      "text": "Repetion 1\n"
+                    },
+                    {
+                      "text": "Repetion 2\n"
+                    },
+                    {
+                      "text": "[\n  \u001b[32m'\\n'\u001b[39m +\n    \u001b[32m'                            \\n'\u001b[39m +\n    \u001b[32m'                                Remove:\\n'\u001b[39m +\n    \u001b[32m'                                \\n'\u001b[39m +\n    \u001b[32m'                            \\n'\u001b[39m +\n    \u001b[32m'                                                                            \\n'\u001b[39m +\n    \u001b[32m'                                \\n'\u001b[39m +\n    \u001b[32m'                            \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Fiction\\n'\u001b[39m +\n    \u001b[32m'                                                                                                            \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Price:\\n'\u001b[39m +\n    \u001b[32m'                            24.00\\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Qty.:\\n'\u001b[39m +\n    \u001b[32m'                                    \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Total:\\n'\u001b[39m +\n    \u001b[32m'                            24.00\\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                    '\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "Remove:FictionPrice:24.00Qty.:Total:24.00\n"
+                    },
+                    {
+                      "text": "[\n  \u001b[32m'Remove:\\n'\u001b[39m +\n    \u001b[32m'                                \\n'\u001b[39m +\n    \u001b[32m'                            \\n'\u001b[39m +\n    \u001b[32m'                                                                            \\n'\u001b[39m +\n    \u001b[32m'                                \\n'\u001b[39m +\n    \u001b[32m'                            \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Fiction\\n'\u001b[39m +\n    \u001b[32m'                                                                                                            \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Price:\\n'\u001b[39m +\n    \u001b[32m'                            24.00\\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Qty.:\\n'\u001b[39m +\n    \u001b[32m'                                    \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                        \\n'\u001b[39m +\n    \u001b[32m'                            Total:\\n'\u001b[39m +\n    \u001b[32m'                            24.00'\u001b[39m\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T03:05:08.613Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dd6175f54235378e135d-1ee5e86a5f9cbfc41033",
+          "file": "TableOperations/Nativetable.spec.ts",
+          "line": 69,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "tagging.spec.ts",
+      "file": "tagging.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Parabank5",
+          "ok": true,
+          "tags": [
+            "smoke",
+            "regression"
+          ],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 10770,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-10T03:05:08.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3c5c064a3d0a936b2a85-67bc40839deb7ad88dbb",
+          "file": "tagging.spec.ts",
+          "line": 54,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-09T03:13:29.405Z",
-    "duration": 33067.346,
-    "expected": 2,
+    "startTime": "2026-10-10T03:05:04.557Z",
+    "duration": 41057.591,
+    "expected": 3,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 2,
     "flaky": 0
   }
 }

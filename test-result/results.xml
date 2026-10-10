@@ -1,78 +1,135 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="1" time="33.067346">
-<testsuite name="screenshot.spec.ts" timestamp="2026-10-09T03:13:29.494Z" hostname="chromium" tests="3" failures="0" skipped="0" time="26.021" errors="1">
-<testcase name="debug testcase › capture the screenshot" classname="screenshot.spec.ts" time="14.62">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\screenshot-debug-testcase-capture-the-screenshot-chromium\test-finished-1.png]]
-
-[[ATTACHMENT|..\test-results\screenshot-debug-testcase-capture-the-screenshot-chromium\video.webm]]
-
-[[ATTACHMENT|..\test-results\screenshot-debug-testcase-capture-the-screenshot-chromium\trace.zip]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="2" time="41.057591">
+<testsuite name="dropdown.spec.ts" timestamp="2026-10-10T03:05:07.142Z" hostname="chromium" tests="1" failures="0" skipped="0" time="21.697" errors="0">
+<testcase name="multiselect native dropdown" classname="dropdown.spec.ts" time="21.697">
 </testcase>
-<testcase name="debug testcase › capture the screenshot Demo Webshop" classname="screenshot.spec.ts" time="10.615">
+</testsuite>
+<testsuite name="fixtures.spec.ts" timestamp="2026-10-10T03:05:07.142Z" hostname="chromium" tests="1" failures="0" skipped="0" time="33.768" errors="1">
+<testcase name="handle the alerts" classname="fixtures.spec.ts" time="33.768">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|..\test-results\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\test-finished-1.png]]
-
-[[ATTACHMENT|..\test-results\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\video.webm]]
-
-[[ATTACHMENT|..\test-results\screenshot-debug-testcase--1c31c-the-screenshot-Demo-Webshop-chromium\trace.zip]]
+[[ATTACHMENT|..\test-results\fixtures-handle-the-alerts-chromium\error-context.md]]
 ]]>
 </system-out>
-</testcase>
-<testcase name="capture the screenshot" classname="screenshot.spec.ts" time="0.786">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|..\test-results\screenshot-capture-the-screenshot-chromium\test-failed-1.png]]
+<error message="page.goto: Timeout 20000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › fixtures.spec.ts:44:6 › handle the alerts ───────────────────────────────────────────
 
-[[ATTACHMENT|..\test-results\screenshot-capture-the-screenshot-chromium\video.webm]]
+    TimeoutError: page.goto: Timeout 20000ms exceeded.
+    Call log:
+      - navigating to "https://the-internet.herokuapp.com/javascript_alerts", waiting until "load"
 
-[[ATTACHMENT|..\test-results\screenshot-capture-the-screenshot-chromium\error-context.md]]
 
-[[ATTACHMENT|..\test-results\screenshot-capture-the-screenshot-chromium\trace.zip]]
-]]>
-</system-out>
-<error message="Playwright Test did not expect test.use() to be called here." type="Error">
-<![CDATA[  [chromium] › screenshot.spec.ts:44:5 › capture the screenshot ────────────────────────────────────
+      43 | // Dialog boxes, certificate popups, alert ...
+      44 | test.only('handle the alerts', async({page})=>{
+    > 45 |     await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
+         |                ^
+      46 |
+      47 |     // if future if any dialog box trigger then execute this.
+      48 |     page.on('dialog', async dialog => {
+        at C:\Users\Anusha\Desktop\Playwright Projects\Playwright_8AM\tests\fixtures.spec.ts:45:16
 
-    Error: Playwright Test did not expect test.use() to be called here.
-    Most common reasons include:
-    - You are calling test.use() in a configuration file.
-    - You are calling test.use() in a file that is imported by the configuration file.
-    - You have two different versions of @playwright/test. This usually happens
-      when one of the dependencies in your package.json depends on @playwright/test.
-    - You are calling test.use() from an async test.describe() block. Only sync ones are supported.
-
-      43 |
-      44 | test('capture the screenshot', async({page})=>{
-    > 45 |     test.use({
-         |          ^
-      46 |         screenshot: 'on',
-      47 |         video:'on',
-      48 |         trace:'on'
-        at C:\Users\Anusha\Desktop\Playwright Projects\Playwright_8AM\tests\screenshot.spec.ts:45:10
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\screenshot-capture-the-screenshot-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\screenshot-capture-the-screenshot-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\screenshot-capture-the-screenshot-chromium\error-context.md
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\screenshot-capture-the-screenshot-chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace ..\test-results\screenshot-capture-the-screenshot-chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
+    Error Context: ..\test-results\fixtures-handle-the-alerts-chromium\error-context.md
 ]]>
 </error>
+</testcase>
+</testsuite>
+<testsuite name="iframe.spec.ts" timestamp="2026-10-10T03:05:07.142Z" hostname="chromium" tests="1" failures="0" skipped="0" time="28.17" errors="1">
+<testcase name="Nested Frames" classname="iframe.spec.ts" time="28.17">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\iframe-Nested-Frames-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\iframe-Nested-Frames-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="page.goto: Timeout 20000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › iframe.spec.ts:17:6 › Nested Frames ─────────────────────────────────────────────────
+
+    TimeoutError: page.goto: Timeout 20000ms exceeded.
+    Call log:
+      - navigating to "https://the-internet.herokuapp.com/nested_frames", waiting until "load"
+
+
+      16 |
+      17 | test.only('Nested Frames', async({page})=>{
+    > 18 |     await page.goto('https://the-internet.herokuapp.com/nested_frames');
+         |                ^
+      19 |
+      20 |     const frames = page.frames();
+      21 |     console.log(frames.length);
+        at C:\Users\Anusha\Desktop\Playwright Projects\Playwright_8AM\tests\iframe.spec.ts:18:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\iframe-Nested-Frames-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\iframe-Nested-Frames-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="TableOperations\Nativetable.spec.ts" timestamp="2026-10-10T03:05:07.142Z" hostname="chromium" tests="1" failures="0" skipped="0" time="25.865" errors="0">
+<testcase name="do operations for particular row" classname="TableOperations\Nativetable.spec.ts" time="25.865">
+<system-out>
+<![CDATA[Welcome to table oprations
+the count fo add to cart is: [33m3[39m
+Repetion 0
+Repetion 1
+Repetion 2
+[
+  [32m'\n'[39m +
+    [32m'                            \n'[39m +
+    [32m'                                Remove:\n'[39m +
+    [32m'                                \n'[39m +
+    [32m'                            \n'[39m +
+    [32m'                                                                            \n'[39m +
+    [32m'                                \n'[39m +
+    [32m'                            \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Fiction\n'[39m +
+    [32m'                                                                                                            \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Price:\n'[39m +
+    [32m'                            24.00\n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Qty.:\n'[39m +
+    [32m'                                    \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Total:\n'[39m +
+    [32m'                            24.00\n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                    '[39m
+]
+Remove:FictionPrice:24.00Qty.:Total:24.00
+[
+  [32m'Remove:\n'[39m +
+    [32m'                                \n'[39m +
+    [32m'                            \n'[39m +
+    [32m'                                                                            \n'[39m +
+    [32m'                                \n'[39m +
+    [32m'                            \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Fiction\n'[39m +
+    [32m'                                                                                                            \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Price:\n'[39m +
+    [32m'                            24.00\n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Qty.:\n'[39m +
+    [32m'                                    \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                        \n'[39m +
+    [32m'                            Total:\n'[39m +
+    [32m'                            24.00'[39m
+]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="tagging.spec.ts" timestamp="2026-10-10T03:05:07.142Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.77" errors="0">
+<testcase name="Parabank5" classname="tagging.spec.ts" time="10.77">
 </testcase>
 </testsuite>
 </testsuites>
