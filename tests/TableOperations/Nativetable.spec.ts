@@ -66,7 +66,7 @@ test('get Product Names', async({page})=>{
     await page. waitForTimeout(5000);
 });
 
-test.only('do operations for particular row', async({page})=>{
+test('do operations for particular row', async({page})=>{
     // table Operatons
     const table = page.locator('.cart');
     const tbodyrows = table.locator('tbody tr');

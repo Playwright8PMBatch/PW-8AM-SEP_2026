@@ -51,7 +51,7 @@ test.fail('Parabank4',{tag:['@smoke', '@regression']}, async({page})=>{
     await expect(page).toHaveTitle(/ParaBank/);
 });
 
-test.only('Parabank5',{tag:['@smoke', '@regression']}, async({page})=>{
+test('Parabank5',{tag:['@smoke', '@regression']}, async({page})=>{
     test.fixme(process.platform === 'android'); // this has issue, once developer fix the issue then re test.
     await page.goto("https://parabank.parasoft.com/parabank/index.htm");
 

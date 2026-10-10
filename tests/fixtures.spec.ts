@@ -41,7 +41,7 @@ test('with context fixture operations', async({context})=>{
 
 
 // Dialog boxes, certificate popups, alert ...
-test.only('handle the alerts', async({page})=>{
+test('handle the alerts', async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
 
     // if future if any dialog box trigger then execute this.

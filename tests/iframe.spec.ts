@@ -14,7 +14,7 @@ test("iframe validations", async({page})=>{
     await page.waitForTimeout(2000);
 })
 
-test.only('Nested Frames', async({page})=>{
+test('Nested Frames', async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/nested_frames');
 
     const frames = page.frames();

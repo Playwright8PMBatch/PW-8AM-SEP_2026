@@ -76,7 +76,7 @@ test("search dropdown", async({page})=>{
     await page.waitForTimeout(5000);
 });
 
-test.only("multiselect native dropdown", async({page})=>{
+test("multiselect native dropdown", async({page})=>{
     await page.goto("https://obstaclecourse.tricentis.com/Obstacles/94441/retry");
     await page.waitForTimeout(5000);    
     const multi = page.locator("#multiselect")
