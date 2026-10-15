@@ -15,7 +15,7 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Last Name' }).fill('Trainer');
 
   // await page.getByRole('textbox', {name:'Employee Id'}).fill('1000');
-  await page.getByLabel('Employee Id').fill('1000');
+  await page.getByLabel('Employee Id').fill('0426');
 
   await expect(page.getByRole('textbox').nth(4)).toBeVisible();
   await expect(page.getByRole('textbox').nth(4)).toHaveValue('0426');
@@ -55,4 +55,25 @@ test('test', async ({ page }) => {
   // await page.getByRole('button', { name: 'Login' }).click();
   // await page.locator('span').filter({ hasText: 'Anusha Trainer' }).click();
   // await expect(page.getByText('Anusha Trainer')).toBeVisible();
+});
+
+test('Add new employee', async ({ page }) => {
+  await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+  await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
+  await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
+  await page.getByRole('button', { name: 'Login' }).click();
+
+  await page.getByRole('link', { name: 'PIM' }).click();
+  await page.getByRole('button', { name: ' Add' }).click();
+  await page.getByRole('textbox', { name: 'First Name' }).fill('Anusha');
+  await page.getByRole('textbox', { name: 'Middle Name' }).press('Tab');
+  await page.getByRole('textbox', { name: 'Last Name' }).fill('Trainer');
+  await page.getByLabel('Employee Id').fill('0426');
+  await expect(page.getByRole('textbox').nth(4)).toBeVisible();
+  await expect(page.getByRole('textbox').nth(4)).toHaveValue('0426');
+  await page.getByRole('textbox').nth(5).click();
+  await page.getByRole('textbox').nth(5).fill('Anusha');
+  await page.locator('input[type="password"]').first().fill('Anusha123');
+  await page.locator('input[type="password"]').nth(1).fill('Anusha123');
+  await page.getByRole('button', { name: 'Save' }).click();
 });

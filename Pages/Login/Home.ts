@@ -14,17 +14,22 @@ export class LoginPage{
     }
 
 async goto(){
-    await this.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    await this.page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", {
+        waitUntil: 'commit',
+    });
     // await this.page.goto(process.env.QA_SIT_URL);
 }
 
 async login(){
-    console.log("QA_USERNAME:", process.env.QA_USERNAME);
-    console.log("QA_PASSWORD:", process.env.QA_PASSWORD);
+    const username = process.env.QA_USERNAME;
+    const password = process.env.QA_PASSWORD;
 
-    await this.usernameinput.fill(process.env.QA_USERNAME ?? '');
-    await this.passwordinput.fill(process.env.QA_PASSWORD ?? '');
+    if (!username || !password) {
+        throw new Error('QA_USERNAME and QA_PASSWORD must be configured');
+    }
+
+    await this.usernameinput.fill(username);
+    await this.passwordinput.fill(password);
     await this.loginButton.click();
 }
 }
-
